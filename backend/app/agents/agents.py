@@ -2,19 +2,6 @@ from crewai import Agent, Task, Crew, Process
 from langchain.tools import tool
 from backend.app.tools.github_tool import fetch_recent_commits, fetch_commit_diff
 
-# Wrap tools if necessary or ensure they are passed correctly
-# In recent CrewAI versions, LangChain tools are supported but sometimes Pydantic validation fails.
-# Let's try to use them directly first, but if that fails (which it did), we might need to check imports.
-# The error was "Input should be a valid dictionary or instance of BaseTool".
-# This often happens if the tool is not recognized as a BaseTool.
-# Let's try to explicitly cast or wrap them if needed. 
-# However, the previous error showed they were StructuredTool.
-# Let's try to use the `tools` argument with a list of functions if they are decorated with @tool? 
-# No, they need to be tool instances.
-
-# Let's try to re-import and see if we can define them differently in github_tool.py
-# For now, I will assume the issue is Pydantic v2.
-
 
 class GitHubAgents:
     def commit_analyst(self):
