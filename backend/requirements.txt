@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+crewai
+langgraph
+langfuse
+python-dotenv
+PyGithub
+langchain-openai
+pydantic
+langchain
+langchain-community

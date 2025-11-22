@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@theme {
+  --color-foreground: #ffffff;
+  --color-background: #141414;
+}
+
+@layer base {
+  body {
+    @apply bg-[#141414] text-white;
+  }
+}
